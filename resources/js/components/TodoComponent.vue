@@ -4,7 +4,7 @@
             <div class="input-group mb-3 w-100">
             <input v-model="form.title" :class="{'is-invalid' : form.errors.has('title')}" type="text" class="form-control form-control-lg"  @keydown="form.errors.clear('title')"
             aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
+            <div class="input-group-append w-75">
                 <button class="btn btn-success" type="submit" id="button-addon2">Add Task</button>
             </div>
             </div>
