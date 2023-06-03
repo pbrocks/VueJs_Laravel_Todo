@@ -1,5 +1,5 @@
 <template>
-    <div class="w-25">
+    <div class="w-75 wide">
         <form @submit.prevent="saveData">
             <div class="input-group mb-3 w-100">
             <input v-model="form.title" :class="{'is-invalid' : form.errors.has('title')}" type="text" class="form-control form-control-lg"  @keydown="form.errors.clear('title')"
@@ -16,7 +16,7 @@
                 <svg v-on:click="toggleTodo(todo)" v-if="todo.completed == false" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z"/>
                     <circle cx="12" cy="12" r="9" />
-            </svg> 
+            </svg>
             <svg v-if="todo.completed == true" v-on:click="toggleTodo(todo)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <circle cx="12" cy="12" r="9" />
@@ -28,7 +28,7 @@
             </div>
 
             <div class="ml-auto mr-2 d-flex align-items-center"><span>
-    
+
     <svg v-on:click="editmode = todo.id"  v-if="editmode != todo.id" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
